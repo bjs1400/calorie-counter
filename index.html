@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calorie Counter</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="main-heading">CALORIE COUNTER</h1>
+      <div class="main-box">
+        <div class="input-container">
+          <div class="item-input">
+            <label for="item-add"><h2>Item</h2></label>
+            <input id="item-add" type="text" />
+          </div>
+          <div class="calories-input">
+            <label for="cals-add"><h2>Calories</h2></label>
+            <input id="cals-add" type="number" />
+          </div>
+          <button onclick="itemAdd()" class="add-btn">ADD</button>
+        </div>
+        <table class="main-table">
+          <tr>
+            <th>ID</th>
+            <th>QTY</th>
+            <th>ITEM</th>
+            <th>CALORIES</th>
+            <th>DEL BTN</th>
+          </tr>
+          <tr id="1">
+            <td>1</td>
+            <td>+</td>
+            <td>Item 1</td>
+            <td>65</td>
+            <td onclick="deleteItem('1')">-</td>
+          </tr>
+          <tr id="2">
+            <td>1</td>
+            <td>+</td>
+            <td>Item 2</td>
+            <td>140</td>
+            <td onclick="deleteItem('2')">-</td>
+          </tr>
+          <tr id="3">
+            <td>1</td>
+            <td>+</td>
+            <td>Item 3</td>
+            <td>20</td>
+            <td onclick="deleteItem('3')">-</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="./js/index.js" async defer></script>
+  </body>
+</html>
