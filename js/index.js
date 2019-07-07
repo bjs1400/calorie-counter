@@ -1,8 +1,13 @@
+var total = 0;
+
 const deleteItem = id => {
   document.getElementById(id).style.display = "none";
+  
 };
 
 const itemAdd = (itemName, numCalories) => {
+  let totalcals = document.getElementById("total");
+
   if (!itemName || !numCalories) {
     return false;
   }
@@ -44,6 +49,10 @@ const itemAdd = (itemName, numCalories) => {
   row.appendChild(cell5);
 
   table.appendChild(row);
-
+  let addn = Number(numCalories);
+  console.log(addn);
+  total += addn;
+  console.log(total);
+  totalcals.innerHTML = total.toString();
   return false;
 };
